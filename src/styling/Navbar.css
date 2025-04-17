@@ -1,0 +1,387 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0; /* Ensure navbar starts at the left edge */
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F5F5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  height: 60px;
+  transition: all 0.3s ease;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0 2%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-right: 4rem;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  height: 60px;
+}
+
+/* Logo - Positioned in the left corner on desktop, center on mobile */
+.logo {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  margin-right: auto; /* Pushes other items to the right */
+  flex-shrink: 0; /* Prevents logo from shrinking */
+ 
+}
+
+.logo-img {
+  height: 51px;
+  width: 100%; /* Prevents overflow */
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo-img {
+  height: 45px;
+}
+
+/* Navigation Links - Centered on desktop */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.nav-links a:hover {
+  color: #0faa5a;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0faa5a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* Left Search Box Styling */
+.left-search {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 200px; /* Adjust width as needed */
+}
+
+/* Media queries for responsive left search */
+@media (max-width: 992px) {
+  .left-search {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-search {
+    display: none; /* Hide on mobile */
+  }
+  
+  /* Show search in mobile menu */
+  .nav-links.active .left-search {
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  padding-right: 2rem;
+  margin-top: 0.5rem;
+}
+
+.icon-link:hover {
+  color: #0faa5a;
+  transform: translateY(-2px);
+}
+
+.icon-text {
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+/* Cart badge styling */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #0faa5a;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+}
+
+/* Cart bounce animation */
+@keyframes cartBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.cart-bounce {
+  animation: cartBounce 0.5s ease;
+}
+
+/* Responsive adjustments for left cart */
+@media (max-width: 768px) {
+  .left-cart {
+    display: none; /* Hide the left cart on mobile */
+  }
+  
+  /* Show cart in mobile menu instead */
+  .nav-links.active .left-cart {
+    display: flex;
+    margin: 1rem auto;
+  }
+
+  .cart-icon-container svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .cart-badge {
+    width: 15px;
+    height: 15px;
+    font-size: 0.8rem;
+    top: -8px;
+    right: -8px;
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+}
+
+
+
+
+/* Mobile Menu Toggle - Left side on mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0.5rem;
+  flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none; /* Hidden by default */
+}
+
+.mobile-menu-overlay.active {
+  display: block; /* Show when active */
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  height: 20px;
+ 
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  background: transparent;
+  padding-left: 0.5rem;
+}
+
+/* Make search box full width on small screens */
+@media (max-width: 768px) {
+
+  .search-box {
+    width: 90%;
+  }
+}
+
+
+/* Responsive Styles */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 0 4%;
+  }
+  
+  .nav-links {
+    gap: 2.5rem;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 3%;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .left-search {
+    width: 160px;
+  }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    grid-column: 1;
+    justify-self: start;
+    padding: 1rem;
+  }
+
+  .logo {
+    grid-column: 2;
+    margin: 0;
+    justify-self: center;
+    height: 50px;
+  }
+
+  .left-search,
+  .search-box {
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transform: translateY(-150%);
+    opacity: 0;
+    background-color: #F5F5F5;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 0;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .icon-text {
+    display: none;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .logo-img {
+    height: 45px;
+  }
+
+  .icon-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .menu-toggle {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .cart-icon-container svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 350px) {
+  .logo-img {
+    height: 40px;
+  }
+
+  .menu-toggle {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+}
+
+

@@ -1,0 +1,259 @@
+.contact-us-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.form-section {
+  flex: 1 1 400px;
+  max-width: 600px;
+  background: linear-gradient(145deg, #f0f4f8, #e2e8f0);
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.about-section {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.form-section h2,
+.about-section h2 {
+  margin-bottom: 1.5rem;
+    color: #000;
+  font-size: 1.75rem;
+  font-weight: thin;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input,
+.form-section textarea {
+  margin-bottom: 1.2rem;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  transition: border-color 0.3s ease;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Updated Button Styling */
+.form-section button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 150px;
+  height: 50px;
+  margin-top: 0.5rem;
+  background-color: #0faa5a;
+  color: white;
+  border: none;
+  align-self: center;
+}
+
+.form-section button:hover {
+  background-color: #51c1ee;
+}
+
+.secondary-btn {
+  background-color: transparent !important;
+  color: #0faa5a !important;
+  border: 2px solid #0faa5a !important;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(15, 170, 90, 0.1) !important;
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* Store Info Section */
+.store-info {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.store-info h3 {
+  color: #1e3a8a;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.store-info p {
+  margin: 0.5rem 0;
+  color: #4b5563;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-us-container {
+      flex-direction: column;
+      padding: 2rem 1rem;
+  }
+  
+  .form-section button {
+      width: 100%;
+  }
+}
+
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .contact-us-container {
+    padding: 5rem 4rem;
+    gap: 3rem;
+  }
+}
+
+/* Medium-large screens (992px to 1199px) */
+@media (max-width: 1199px) {
+  .contact-us-container {
+    padding: 4rem 3rem;
+    gap: 2.5rem;
+  }
+}
+
+/* Medium screens (768px to 991px) */
+@media (max-width: 991px) {
+  .contact-us-container {
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+
+  .form-section,
+  .about-section {
+    flex: 1 1 350px;
+  }
+}
+
+/* Small screens (576px to 767px) */
+@media (max-width: 767px) {
+  .contact-us-container {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .form-section,
+  .about-section {
+    max-width: 90%;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .form-section form {
+    align-items: center;
+  }
+
+  .form-section h2,
+  .about-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .form-section input,
+  .form-section textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .form-section button {
+    width: 100%;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .store-info {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .store-info h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra small screens (below 576px) */
+@media (max-width: 575px) {
+  .contact-us-container {
+    padding: 1.5rem 0;
+    gap: 1rem;
+  }
+
+  .form-section{
+    padding: 1.25rem ;
+    max-width: 95%;
+  }
+.about-section {
+    padding: 1.25rem 0;
+    max-width: 95%;
+  }
+  .form-section h2,
+  .about-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-section input,
+  .form-section textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-section button {
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .store-info {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .store-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .store-info p {
+    font-size: 0.9rem;
+  }
+}

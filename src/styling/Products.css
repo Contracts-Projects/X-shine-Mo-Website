@@ -1,0 +1,66 @@
+.products-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 16px;
+    
+  }
+  
+  .products-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .products-section p {
+    font-size: 1rem;
+    color: #666;
+    /* margin-bottom: 2rem; */
+  }
+
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 123, 255, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  /* Hover effect for the arrows */
+  .scroll-arrow:hover {
+    background-color: rgba(0, 123, 255, 0.8);
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 2rem; /* Space between the cards */
+    max-width: 1200px; /* Limit the width of the product list */
+    margin: 0 auto; /* Center align the entire container */
+  }
+  
+  .mui-card {
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 16px;
+  }
+  
+  .mui-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  

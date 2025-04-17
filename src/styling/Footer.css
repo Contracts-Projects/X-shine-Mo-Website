@@ -1,0 +1,137 @@
+/* src/styling/Footer.css */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    width: 97%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align all items to the top */
+    justify-content: flex-start; /* Start sections from the same horizontal line */
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items (text/links) to start */
+  }
+  
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #00a551;
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    font-size: 14px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    color: #ddd;
+    margin: 4px 0;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #fff;
+  }
+
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .footer {
+    padding: 50px 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    gap: 80px;
+  }
+}
+
+/* Medium-large screens (992px to 1199px) */
+@media (max-width: 1199px) {
+  .footer {
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    gap: 60px;
+  }
+}
+
+/* Medium screens (768px to 991px) */
+@media (max-width: 991px) {
+  .footer {
+    padding: 35px 0;
+  }
+  
+  .footer-container {
+    gap: 40px;
+  }
+  
+  .footer-section {
+    min-width: 160px;
+  }
+}
+
+/* Small screens (576px to 767px) */
+@media (max-width: 767px) {
+  .footer {
+    padding: 30px 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-section {
+    min-width: 100%;
+    align-items: center;
+  }
+  
+  .footer-section h4 {
+    font-size: 16px;
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens (below 576px) */
+@media (max-width: 575px) {
+  .footer {
+    padding: 25px 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .footer-container {
+    gap: 25px;
+  }
+  
+  .footer-section h4 {
+    font-size: 15px;
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    font-size: 12px;
+  }
+}

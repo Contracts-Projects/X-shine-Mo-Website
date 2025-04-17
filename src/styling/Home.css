@@ -1,0 +1,325 @@
+/* General container styling */
+/* Add these rules to fix the visibility issues */
+.home-page {
+  padding-top: 80px; /* Adjust based on your navbar height */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make sure product-banner has proper spacing */
+.product-banner {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* Fix the partnerships section positioning */
+.partnerships-section {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ 
+}
+.partnerships-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.partnerships-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #0faa5a, #51c1ee);
+  border-radius: 3px;
+}
+/* Ensure spacing between sections */
+#products-section, #about-section, #contact-section {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+
+.home-container {
+  position:static;
+  top: 10%;
+  padding: 2rem 0rem;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Product banner layout */
+.product-banner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.5rem;
+  gap: 1rem;
+  
+}
+
+/* Left content */
+.banner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Brand & arrivals text */
+.brand-text {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.arrivals-text {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+  margin: 0.3rem 0 0.3rem;
+  color: #000;
+}
+
+/* Product description */
+.product-description {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.banner-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.products-btn,
+.email-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  width: 150px;
+  height: 50px;
+}
+
+.products-btn {
+  background-color: #0faa5a;
+  color: white;
+}
+
+.email-btn {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #0faa5a;
+}
+
+/* Hover effects */
+.products-btn:hover {
+  background-color:#51c1ee;
+}
+
+.email-btn:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Right Image Section */
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.products-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.partners-logos {
+  width: 100%;
+  max-width: 1200px; /* Add max-width to control the spread */
+  height: auto;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Responsive Styles */
+
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .home-container {
+    padding: 2rem 4rem;
+  }
+
+  .product-banner {
+    gap: 4rem;
+  }
+}
+
+/* Medium-large screens (992px to 1199px) */
+@media (max-width: 1199px) {
+  .home-container {
+    padding: 2rem 3rem;
+  }
+
+  .product-banner {
+    gap: 3rem;
+  }
+}
+
+/* Medium screens (768px to 991px) */
+@media (max-width: 991px) {
+  .home-container {
+    margin-top: 2%; /* Reduced from 5% */
+    padding: 1rem 2rem;
+  }
+
+  .product-banner {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    margin-top: 1rem; /* Added to move content up */
+  }
+
+  .banner-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .arrivals-text {
+    font-size: 2.2rem;
+  }
+
+  .products-img {
+    max-width: 90%;
+  }
+
+  .partnerships-section {
+    padding: 2rem 0rem;
+  }
+
+  .partners-logos {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Small screens (576px to 767px) */
+@media (max-width: 767px) {
+  .home-container {
+    margin-top: 40px; /* Reduced from 60px */
+    padding: 0.5rem 1rem;
+  }
+
+  .product-banner {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    margin-top: 0.5rem; /* Reduced margin */
+  }
+
+  .arrivals-text {
+    font-size: 1.8rem;
+  }
+
+  .brand-text {
+    font-size: 1.4rem;
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .products-btn,
+  .email-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .products-img {
+    max-width: 85%;
+  }
+
+  .partners-logos {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .partnerships-section {
+    margin-top: 2rem; /* Reduced from 3rem */
+    padding-left: 2rem;
+  }
+}
+
+/* Extra small screens (below 576px) */
+@media (max-width: 575px) {
+  .home-container {
+    margin-top: 30px; /* Further reduced */
+    padding: 0.25rem;
+  }
+
+  .product-banner {
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .arrivals-text {
+    font-size: 1.6rem;
+  }
+
+  .brand-text {
+    font-size: 1.2rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .products-img {
+    max-width: 100%;
+  }
+
+  .partnerships-section {
+    padding: 1.5rem 0rem;
+    margin-top: 1.5rem;
+  }
+
+  .partners-logos {
+    gap: 1rem;
+    padding: 0;
+  }
+}

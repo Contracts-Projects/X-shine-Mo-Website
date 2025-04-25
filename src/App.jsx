@@ -9,6 +9,7 @@ import Contact from "./components/ContactUs";
 import Cart from "./pages/Cart";
 import Profile from "./pages/Profile";
 import { CartProvider } from "./components/CartContent";
+import form from "./components/ProductForm";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/Add" element={<form />} /> */}
         </Routes>
         {/* <Footer /> */}
       </Router>

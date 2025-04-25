@@ -79,6 +79,7 @@ export const Navbar = () => {
         <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
         <li><Link to="/products" onClick={closeMobileMenu}>Products</Link></li>
         <li><Link to="/contact" onClick={closeMobileMenu}>Contact Us</Link></li>
+        {/* <li><Link to="/Add" onClick={closeMobileMenu}>Add Product</Link></li> */}
       </ul>
 
       {/* Cart moved to right */}

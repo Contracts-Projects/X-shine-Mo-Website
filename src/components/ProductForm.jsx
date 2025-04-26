@@ -49,7 +49,7 @@ const ProductForm = () => {
 
     try {
       // Send data to backend API
-      const response = await axios.post('http://localhost:5000/api/products', formData);
+      const response = await axios.post('https://xshinemo.onrender.com/api/products', formData);
       
       // Reset form on success
       setFormData({

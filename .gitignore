@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 Login.jsx
-Admin
-AuthHook.jsx
+unauthorised.jsx

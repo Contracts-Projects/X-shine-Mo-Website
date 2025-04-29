@@ -11,7 +11,7 @@ export const fetchProducts = createAsyncThunk(
         .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
         .join('&');
       
-      const url = `/api/products${queryString ? `?${queryString}` : ''}`;
+      const url = `https://xshinemo.onrender.com/api/products${queryString ? `?${queryString}` : ''}`;
       
       const response = await fetch(url);
       
@@ -58,7 +58,7 @@ export const createProduct = createAsyncThunk(
         return rejectWithValue('Authentication required');
       }
       
-      const response = await fetch('/api/products', {
+      const response = await fetch('https://xshinemo.onrender.com/api/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ export const updateProduct = createAsyncThunk(
         return rejectWithValue('Authentication required');
       }
       
-      const response = await fetch(`/api/products/${id}`, {
+      const response = await fetch(`https://xshinemo.onrender.com/api/products/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ export const deleteProduct = createAsyncThunk(
         return rejectWithValue('Authentication required');
       }
       
-      const response = await fetch(`/api/products/${productId}`, {
+      const response = await fetch(`https://xshinemo.onrender.com/api/products/${productId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

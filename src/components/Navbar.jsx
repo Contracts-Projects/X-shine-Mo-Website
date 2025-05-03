@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci"; // Search icon
+import { CiSearch } from "react-icons/ci";
 import '../styling/Navbar.css';
 import logo from "../assets/XshineMo logo.png";
-import { useCart } from "./CartContent"; // Adjust path as needed
+import { useCart } from "./CartContent"; 
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -79,7 +79,7 @@ export const Navbar = () => {
         <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
         <li><Link to="/products" onClick={closeMobileMenu}>Products</Link></li>
         <li><Link to="/contact" onClick={closeMobileMenu}>Contact Us</Link></li>
-        {/* <li><Link to="/Add" onClick={closeMobileMenu}>Add Product</Link></li> */}
+        <li><Link to="/profile" onClick={closeMobileMenu}>Profile</Link></li>
       </ul>
 
       {/* Cart moved to right */}

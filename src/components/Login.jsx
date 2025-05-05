@@ -14,12 +14,13 @@ const Login = () => {
   const { login, isAuthenticated, status, error } = useAuth();
   
   // Get redirect path from location state or default to home
-  const from = location.state?.from || '/';
+  const from = location.state?.from || './admin';
   
   // If already authenticated, redirect to intended destination
   useEffect(() => {
     if (isAuthenticated) {
       navigate(from, { replace: true });
+      console.log("Already Authenticated")
     }
   }, [isAuthenticated, navigate, from]);
   
@@ -44,6 +45,10 @@ const Login = () => {
     // Attempt login
     try {
       await login(formData.email, formData.password);
+
+      console.log("Success Login")
+      navigate("./admin")
+
     } catch (err) {
       // Error handling happens through the status and error from useAuth
     }

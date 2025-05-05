@@ -8,7 +8,7 @@ import Contact from "./components/ContactUs";
 import Cart from "./pages/Cart";
 import Profile from "./pages/Profile";
 import { CartProvider } from "./components/CartContent";
-import form from "./components/ProductForm";
+import AdminProductManagement from "./admins/AdminProductManagment";
 import "./App.css";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
-          {/* <Route path="/Add" element={<form />} /> */}
+          <Route path="/admin" element={<AdminProductManagement />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
